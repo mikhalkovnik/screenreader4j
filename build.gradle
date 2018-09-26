@@ -16,3 +16,13 @@ dependencies {
     compile 'net.java.dev.jna:jna-platform:4.5.2'
     compile 'ch.qos.logback:logback-classic:1.2.3'
 }
+
+jar {
+    baseName = 'screenreader4j-lib'
+}
+
+task fatJar(type: Jar) {
+    baseName = 'screenreader4j-fat'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
