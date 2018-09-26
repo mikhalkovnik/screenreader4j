@@ -10,6 +10,29 @@ Supported platforms
 2. ~~Linux~~ (Coming soon)
 3. ~~Mac OS~~ (Coming soon)
 
+How to compile
+==============
+1. Clone project
+```
+git clone https://github.com/mikhalkovnik/screenreader4j
+```
+2. Build project with Gradle Wrapper
+```
+gradlew build // for Unix systems
+
+gradlew.bat build // for Windows system
+```
+3. For packaging project into jar use
+```
+gradlew jar // for Unix systems
+
+gradlew.bat jar // for Windows systems
+```
+and you can find the compiled jar in the follow directory
+```
+screenreader4j/build/libs/screenreader4j-<version>.jar
+```
+
 How to use
 ==========
 1. Find `NativeWindow` with `NativeWindow.find`
